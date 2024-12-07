@@ -1,63 +1,38 @@
-
-
-/* general  */
-
-body {
-    background-color: hsl(30, 54%, 90%);
-    font-family: 'Young Serif', serif;
+/* global */
+.recipe {
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Outfit";
+    text-align: left;
 }
 
+.recipe img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
 
 .container {
     padding: 30px;
-}
-
-.recipe {
-    background-color: white;
     color: hsl(30, 10%, 34%);
+    font-size: 16px;
     font-family: "Outfit";
-    text-align: left;
-    margin-bottom: 40px;
-
 }
 
-
-
-h1 {
-    color: black;
+.preparation_time {
+    background-color:hsl(330, 100%, 98%)  ;
+    border-radius: 15px;
+    padding: 10px 30px; 
+}
+.preparation_time ul.list li {
+    margin-left: 10px;
 }
 
-h2 {
-    color: hsl(14, 45%, 36%);
-}
-
-.prep_time {
-    background-color: hsl(330, 100%, 98%);
-    padding: 20px;
-    border-radius: 5px; /* زوايا دائرية */
-}
-
-.prep_time h3 {
-    color: hsl(332, 51%, 32%);
-    margin-bottom: 10px;
-}
-
-.prep_time ul {
-    color: hsl(30, 10%, 34%);
-}
-
-.prep_time li::marker {
+.preparation_time li::marker {
     color: hsl(332, 51%, 32%);
 }
 
-li::marker {
-    color: hsl(14, 45%, 36%);
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: hsl(30, 18%, 87%);
+.Instructions li::marker {
+    color: hsl(14, 45%, 36%) ;
 }
 
 .nutrition-table {
@@ -80,59 +55,76 @@ hr {
     border-top: none; /* إزالة الخط العلوي للصف الأول */
 }
 
-.attribution {
-    text-align: left;
+hr {
+    border: none;
+    height: 1px;
+    background-color: hsl(30, 18%, 87%);
 }
 
+h1 {
+    font-family: 'Young Serif', serif;
+    color: black;
+}
 
-/* moible view */
-@media (max-width: 375px) {
-    body {
-        width: 375px;
-    }
-    
-    .recipe {
-        /* code */
+h2 {
+    color: hsl(14, 45%, 36%) ;
+}
+h3 {
+   color: hsl(332, 51%, 32%);
+}
 
-    }
-    
-    .container-img {
+/* Mobile view */
+@media (max-width: 499px) {
+    body, html {
+        margin: 0;
+        padding: 0;
         width: 100%;
+        height: 100%;
     }
-    
-
-
-
-    .attribution {
-        display: none;
-
-    }
-}
-
-/* desktop view */
-@media (min-width: 500px) {
-
-    body {
+    main {
+        margin: 0;
+        padding: 0;
+        width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 50px;
-        
+        box-sizing: border-box;
     }
-
     .recipe {
-        border-radius: 30px; 
-        padding: 30px;
-        margin: 50px ; 
-        max-width: 650px;
-    }
-
-    .container-img {
         width: 100%;
+        padding: 0;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+    footer {
+        display: none;
+    }
+}
+
+/* Desk top view */
+@media (min-width: 500px) {
+    body {
+        background-color: hsl(30, 54%, 90%);
+    }
+    main {
+        margin: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .recipe {
+        width: 650px;
+        padding: 30px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+    }
+    .recipe img {
         border-radius: 12px;
     }
-
-
-
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
 }
